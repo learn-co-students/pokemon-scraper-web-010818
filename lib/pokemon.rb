@@ -17,7 +17,6 @@ class Pokemon
     db.execute("INSERT INTO pokemon (name, type) VALUES (?, ?);",name, type)
   end
 
-  # Pokemon .find finds a pokemon from the database by their id number and returns a new Pokemon object
   def self.find(id, db)
     data = []
     data = db.execute("SELECT * FROM pokemon WHERE id = ?", id).flatten
@@ -32,5 +31,3 @@ class Pokemon
     db.execute("UPDATE pokemon SET hp = ?;",new_value)
   end
 end
-
-# Pry.start
