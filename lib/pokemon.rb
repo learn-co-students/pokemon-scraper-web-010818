@@ -10,7 +10,6 @@ class Pokemon
     @db = args[:db] if args[:db]
     @hp = args[:hp] if args[:hp]
 
-    self.class.save(@name, @type, @db)
   end
 
   def self.save(name, type, db)
